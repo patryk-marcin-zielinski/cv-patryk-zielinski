@@ -1,7 +1,7 @@
 # Curriculum Vitae &mdash; szablon napisany w HTML i CSS
 
 <p align="center">
-  <img height="850" width="600" src="https://raw.githubusercontent.com/WojtekWernicki/contact-form/master/cv.png">
+  <img height="850" width="600" src="https://raw.githubusercontent.com/WojtekWernicki/curriculum-vitae/master/cv.png">
 </p>
 
 Prosty szablon CV stworzony z myślą o programistach. Zawiera sekcje o doświadczeniu zawodowym, edukacji, wykonanych projektach z klikalnymi linkami do repozytorium, znanych językach programowania, narzędziach i językach obcych.
