@@ -1,38 +1,24 @@
-# gulp-starter
-Simple gulp starter for front-end projects.
+# Curriculum Vitae &mdash; szablon napisany w HTML i CSS
 
-## Basic elements
+<p align="center">
+  <img height="850" width="600" src="https://raw.githubusercontent.com/WojtekWernicki/contact-form/master/cv.png">
+</p>
 
-- SASS compiler (please use `.scss` extension or change extension in `gulpfile.js`)
-- CSS minify
-- JS concat
-- JSHint (for ES6)
-- Image optimization
+Prosty szablon CV stworzony z myślą o programistach. Zawiera sekcje o doświadczeniu zawodowym, edukacji, wykonanych projektach z klikalnymi linkami do repozytorium, znanych językach programowania, narzędziach i językach obcych.
 
-## Requirements
+## Instrukcja obsługi
 
-- Node.JS &ge; 6.1
-- npm &ge; 4.6
+0. Zainstaluj Node.js (https://nodejs.org/en/), gulp i gulp-cli: `npm install -g gulp gulp-cli`
+1. Sklonuj repozytorium
+2. W konsoli przejdź do folderu z szablonem i uruchom instalację pakietów npm: `npm install`
+3. Wklej zdjęcie, którego użyjesz w swoim CV, do folderu `src/img`
+4. Uruchom gulpa: `gulp`
+5. Dokonaj niezbędnych zmian w HTML-u. Jeżeli chcesz zmienić kolor, możesz to zrobić w pliku [style.scss](src/scss/style.scss)
+6. Używając Google Chrome, otwórz CV i wydrukuj je do PDF-a
+7. Gratulacje, masz swoje CV!
 
-## Instruction
-1. Fork this repo. Check [GitHub Help](https://help.github.com/articles/fork-a-repo/) if you need help.
-2. Install npm packages: `npm install`.
-3. Put your files in directories inside `src`.
-4. Start using gulp: `gulp`.
+## Inne
 
-## Q&A
+W stopce umieszczona jest już prawna formułka, dzięki której pracodawca może przetwarzać Twoje dane osobowe umieszczone w CV.
 
-### Why uglify() is commented?
-During testing [gulpfile.js](gulpfile.js), `gulp-uglify` was throwing an error (check details [here](https://gist.github.com/WojtekWernicki/5bb1a1722ad94ff7c2cbd1f32169188d)). I decided to disable it and `gulp-rename` the line above. JS files will be concated, but won't be minified. Probably this is fault of my computer (Windows 10), so if you want to try does your Node & gulp can minify JS file, just uncomment these two lines and run `gulp`. If you know how to deal with this problem, please make pull request.
-
-### Why `gulp-watch` doesn't trigger on new images?
-
-I don't know why ¯ \\\_(ツ)_/¯ You need to restart gulp, then `gulp-watch` will optimize your photos. If you know how track new photos, please make pull request.
-
-### What does `.keep` file mean?
-
-Nothing. I created these files insides directories, because Git doesn't track empty directories (see this [thread](http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository) on Stack Overflow). You can delete them when you put your files inside directories.
-
-## License
-
-[MIT License](LICENSE)
+Do wykonania tego szablonu użyłem stworzonego przez siebie **startera [gulp-starter](https://github.com/WojtekWernicki/gulp-starter)**. Za pomysł dziękuję Andrzejowi Prusinowskiemu ([avris.it](https://avris.it)).
