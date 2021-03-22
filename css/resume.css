@@ -7,46 +7,6 @@ body {
     letter-spacing: 2px;
 }
 
-.content.list.labeled > div {
-    padding: 4px 4px 4px 4px;
-    /* border-radius: 5px; */
-    /* border: 1px solid gray; */
-    text-align: center;
-    /* background-color: rgb(190, 190, 190); */
-    /* font-weight: bold; */
-    font-size: 10pt;
-    text-decoration: underline;
-}
-
-.content.list.labeled > div:not(:last-child) {
-    margin-right: 7px;
-}
-
-.content.list.course > div {
-    padding: 4px 4px 4px 60px;
-    text-align: left;
-    font-size: 10pt;
-    position: relative;
-}
-
-.content.list.course > div:before {
-    content: '';
-    border-radius: 50%;
-    border: 1px solid rgb(150, 150, 150);
-    background-color: rgb(150, 150, 150);
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    transform: translateY(-50%);
-}
-
-.content.list.course > div:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-
 .bold {
     font-weight: bold;
 }
@@ -59,6 +19,10 @@ h3 {
     margin: 0
 }
 
+h1 { 
+    font-size: 3em;
+}
+
 .container {
     display: grid;
     grid-template-columns: 40% auto;
@@ -68,10 +32,6 @@ h3 {
         "sidebar main"
         "footer footer";
     gap: 15px 10px;
-}
-
-h1 { 
-    font-size: 3em;
 }
 
 .sidebar {
@@ -103,6 +63,53 @@ h1 {
     width: 150px;
 }
 
+.sidebar > .section .content.labeled {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content.labeled > div {
+    padding: 4px 4px 4px 4px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: center;
+    background-color: rgb(190, 190, 190);
+    /* font-weight: bold; */
+    font-size: 10pt;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.content.labeled > div {
+    margin: 3px 3px 3px 3px;
+}
+
+
+.content.list > div {
+    padding: 4px 4px 4px 60px;
+    text-align: left;
+    font-size: 10pt;
+    position: relative;
+}
+
+.content.list > div:before {
+    content: '';
+    border-radius: 50%;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgb(150, 150, 150);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+.content.list > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+
 .section > .title {
     letter-spacing: 2.5px;
     border-bottom: 2px solid gray;
@@ -131,7 +138,6 @@ h1 {
         "border content";
     gap: 0 10px;
 }
-
 
 .main > .section > .icon {
     grid-area: icon / 1;
@@ -169,99 +175,97 @@ h1 {
     z-index: -1;
 }
 
-/* Language */
-
-.main > .section.language > .icon:after {
-    font-family: "Font Awesome 5 Free";
-    font-size: 30px;
+.sidebar > .section > .title > .icon:after {
+    font-size: 20px;
     font-weight:900;
-    content: "\f11c";
     z-index: -1;
 }
 
-.main > .section.language > .content {
+.sidebar > .section > .title {
+    display: flex;
+    align-items: center;
+}
+.sidebar > .section > .title > *:not(:last-child){
+    margin-right: 10px;
+}
+
+/* Language */
+
+.sidebar > .section.language > .title > .icon:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f11c";
+}
+
+.sidebar > .section.language > .content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 } 
 
-.main > .section.language > .content > .item{
+.sidebar > .section.language > .content > .item{
     display: flex;
     flex-direction: column;
     flex: 1 1 0px
 } 
 
-.main > .section.language > .content > .item > span[class^="icon-"]{
+.sidebar > .section.language > .content > .item > span[class^="icon-"]{
     font-size: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
 } 
 
-.main > .section.language > .content > .item > span[class^="icon-"]:before {
+.sidebar > .section.language > .content > .item > span[class^="icon-"]:before {
     color: rgb(101, 102, 100);
 }
 
-.main > .section.language > .content > .item > span.name{
+.sidebar > .section.language > .content > .item > span.name{
     text-align: center;
 }
 
-.main > .section.language > .content > .item:not(:last-child) {
+.sidebar > .section.language > .content > .item:not(:last-child) {
     margin-right: 10px;
 }
-
-.main > .section > .icon:after {
-    font-size: 30px;
-    font-weight:900;
-    z-index: -1;
-}
-
-.main > .section > .content {
-    display: flex;
-    flex-direction: row;
-}
-
 /* Tools */
-.main > .section.tools > .icon:after {
+.sidebar > .section.tools > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f0ad";
 }
 
-/* Tools */
+/* Methodologies */
 
-.main > .section.methodologies > .icon:after {
+.sidebar > .section.methodologies > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f5eb";
 }
 
 /* Frameworks and Libraries*/
-
-.main > .section.framework > .icon:after {
+.sidebar > .section.framework > .title > .icon:after {
     font-family: "icomoon";
     content: "\e942";
 }
 
 /* Cloud */
-.main > .section.cloud > .icon:after {
+.sidebar > .section.cloud > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f0c2";
 }
 
 /* Architectures */
-.main > .section.architectures > .icon:after {
+.sidebar > .section.architectures > .title > .icon:after {
     font-family: "icomoon";
     content: "\ea62";
 }
 
 /* Practicies */
-.main > .section.practices > .icon:after {
+.sidebar > .section.practices > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f164";
 }
 
 /* Databases */
-.main > .section.databases > .icon:after {
+.sidebar > .section.databases > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f1c0";
 }
@@ -294,11 +298,6 @@ h1 {
 .sidebar > .section.contact .item > .details *:not(:last-child)  {
     margin-bottom: 5px 
 }
-
-/* Language */
-
-
-
 
 @media print {
     body{
