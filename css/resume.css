@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: lightgray;
-    font: 10pt "Tahoma";
+    font: 12pt "Tahoma";
     color: rgb(101, 102, 100);
     letter-spacing: 2px;
 }
@@ -90,7 +90,7 @@ h1 {
     padding-left: 30px;
 }
 
-.job .title {
+.job > .details .title {
     font-style: italic;
     margin-bottom: 5px;
 }
@@ -226,12 +226,10 @@ h1 {
     transform: translateY(-50%);
 }
 
-.main > .section.work .job > .company {
-    font-style: italic;
-}
-
 .main > .section.work .job .company {
     grid-area: company;
+    font-style: italic;
+    margin-bottom: 15px;
 }
 
 .main > .section.work .job .details {
@@ -239,7 +237,7 @@ h1 {
 }
 
 .main > .section.work .job .project:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .main > .section.work .job .project > *:not(:last-child){
