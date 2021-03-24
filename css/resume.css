@@ -23,37 +23,118 @@ h1 {
     font-size: 3em;
 }
 
-.container {
+.container-new {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 50% 20px auto;
     grid-template-rows: auto;
     grid-template-areas: 
-        "header header"
-        "sidebar main"
-        "footer footer";
-    gap: 15px 10px;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
-}
-
-.main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
+        "header     header     header"
+        "left       separator  right"
+        "left       separator  right"
+        "left       separator  right"
+        "left       separator  right"
+        "left       separator  right"
+        "left       separator  right"
+        "left       separator  right"
+        "experience experience experience";
+    gap: 10px 10px;
 }
 
 .picture {
-    grid-area: header / 1;
+    grid-area:  1 / 1;
     justify-self: center;
 }
 
 .me { 
-    grid-area: header / 2;
+    grid-area:  1 / 2 / 2 / 4;
     align-self: center
+}
+
+.contact {
+    grid-area: 2 / 1;
+} 
+
+.profile {
+    grid-area: 2 / 3;
+}
+
+.courses {
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+.language {
+    grid-area: 3 / 3;
+}
+
+.cloud {
+    grid-area: 5 / 1;
+}
+
+.practices {
+    grid-area: 4 / 3;
+}
+
+.framework {
+    grid-area: 6 / 1;
+}
+
+.tools {
+    grid-area: 5 / 3;
+}
+
+.methodologies {
+    grid-area: 7 / 1;
+}
+
+.architectures {
+    grid-area: 6 / 3;
+}
+
+.databases {
+    grid-area: 7 / 3;
+}
+
+.experience {
+    grid-area: experience;
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title    title"
+        "timeline work";
+    gap: 10px 10px;
+}
+
+.experience > .title {
+    grid-area: title;
+    letter-spacing: 2.5px;
+    border-bottom: 2px solid gray;
+    height: 40px;
+    display: flex;
+}
+
+.experience > .title > h3 {
+    align-self: center;
+}
+
+.experience > .timeline {
+    grid-area: timeline;
+    width: 2px;
+    justify-self: center;
+    background-color: gray;
+    margin: 10px 0 10px 0;
+}
+
+.experience > .work {
+    grid-area: work;
+}
+
+.border {
+    grid-area: separator;
+    width: 2px;
+    justify-self: center;
+    background-color: gray;
+    margin: 10px 0 10px 0;
 }
 
 .picture > img {
@@ -88,11 +169,6 @@ h1 {
 
 .content.labeled {
     padding-left: 30px;
-}
-
-.job > .details .title {
-    font-style: italic;
-    margin-bottom: 5px;
 }
 
 .list > div:not(.title) {
@@ -137,83 +213,60 @@ h1 {
     margin-bottom: 5px;
 }
 
-.main > .section {
-    display: grid;
-    grid-template-columns: 40px auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "icon title"
-        "border content";
-    gap: 0 10px;
-}
-
-.main > .section > .icon {
-    grid-area: icon / 1;
-    align-self: center;
-}
-
-.main > .section > .title {
-    grid-area: icon / 2;
-}
-
-.main > .section > .border {
-    grid-area: border / 1;
-    width: 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background:gray;
-    place-self: stretch center;
-}
-
-.main > .section > .content {
-    grid-area: content / 2;
-}
-
-.main > .section > .icon {
+.section > .icon {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.main > .section > .icon:after {
+.section > .icon:after {
     font-size: 40px;
     font-weight:900;
     z-index: -1;
 }
 
-.main > .section.profile > .icon:after {
+.section.profile > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f2bd";
 }
 
-.main > .section.work > .icon:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f0b1";
+.experience > .title > .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
-.main > .section.work .job {
+.experience > .title > .icon:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0b1";
+    font-size: 20px;
+    font-weight:900;
+    z-index: -1;
+}
+
+.section.work .job {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-        "title"
+        "title" 
         "company"
         "details";
     gap: 10px 0;
 }
 
-.main > .section.work .job:not(:last-child) {
-    margin-bottom: 25px;
+.section.work .job:not(:last-child) {
+    margin-bottom: 40px;
 }
 
-.main > .section.work .job > .title {
+.section.work .job > .title {
     grid-area: title;
     position: relative;
     font-size: 1.2em;
     font-weight: 600;
 }
 
-.main > .section.work .job > .title::before {
+.section.work .job > .title::before {
     content: '';    
     position: absolute;
     border-radius: 50%;
@@ -226,144 +279,191 @@ h1 {
     transform: translateY(-50%);
 }
 
-.main > .section.work .job .company {
+.section.work .job .company {
     grid-area: company;
     font-style: italic;
     margin-bottom: 15px;
 }
 
-.main > .section.work .job .details {
+.section.work .job .details {
     grid-area: details;
 }
 
-.main > .section.work .job .project:not(:last-child){
+.section.work .job > .details .title {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.section.work .job .project {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "name name name name"
+        "description features responsibilities stack";
+    gap: 15px 10px;
+    border: 1px dashed gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.section.work .job .project > .name {
+    grid-area: name;
+}
+
+.section.work .job .project > .description {
+    grid-area: description;
+}
+
+.section.work .job .project > .features {
+    grid-area: features;
+}
+
+.section.work .job .project > .responsibilities {
+    grid-area: responsibilities;
+}
+
+.section.work .job .project > .stack > .labeled{
+    grid-area: stack;
+    padding-left: 0;
+}
+
+.section.work .job .project .list *:not(.title){
+    padding: 4px 4px 4px 30px;
+}
+
+.section.work .job .project .list *::before{
+    left:10px;
+}
+
+.section.work .job .project:not(:last-child){
     margin-bottom: 25px;
 }
 
-.main > .section.work .job .project > *:not(:last-child){
+.section.work .job .project > *:not(:last-child){
     margin-bottom: 7px;
 }
 
-.sidebar > .section > .title > .icon:after {
+.section > .title > .icon:after {
     font-size: 20px;
     font-weight:900;
     z-index: -1;
 }
 
-.sidebar > .section > .title {
+.section > .title {
     display: flex;
     align-items: center;
 }
-.sidebar > .section > .title > *:not(:last-child){
+.section > .title > *:not(:last-child){
     margin-right: 10px;
 }
 
 /* Language */
 
-.sidebar > .section.language > .title > .icon:after {
+.section.language > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f11c";
 }
 
-.sidebar > .section.language > .content {
+.section.language > .content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 } 
 
-.sidebar > .section.language > .content > .item{
+.section.language > .content > .item{
     display: flex;
     flex-direction: column;
     flex: 1 1 0px
 } 
 
-.sidebar > .section.language > .content > .item > span[class^="icon-"]{
+.section.language > .content > .item > span[class^="icon-"]{
     font-size: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
 } 
 
-.sidebar > .section.language > .content > .item > span[class^="icon-"]:before {
+.section.language > .content > .item > span[class^="icon-"]:before {
     color: rgb(101, 102, 100);
 }
 
-.sidebar > .section.language > .content > .item > span.name{
+.section.language > .content > .item > span.name{
     text-align: center;
 }
 
-.sidebar > .section.language > .content > .item:not(:last-child) {
+.section.language > .content > .item:not(:last-child) {
     margin-right: 10px;
 }
 /* Tools */
-.sidebar > .section.tools > .title > .icon:after {
+.section.tools > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f0ad";
 }
 
 /* Methodologies */
 
-.sidebar > .section.methodologies > .title > .icon:after {
+.section.methodologies > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f5eb";
 }
 
 /* Frameworks and Libraries*/
-.sidebar > .section.framework > .title > .icon:after {
+.section.framework > .title > .icon:after {
     font-family: "icomoon";
     content: "\e942";
 }
 
 /* Cloud */
-.sidebar > .section.cloud > .title > .icon:after {
+.section.cloud > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f0c2";
 }
 
 /* Architectures */
-.sidebar > .section.architectures > .title > .icon:after {
+.section.architectures > .title > .icon:after {
     font-family: "icomoon";
     content: "\ea62";
 }
 
 /* Practicies */
-.sidebar > .section.practices > .title > .icon:after {
+.section.practices > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f164";
 }
 
 /* Databases */
-.sidebar > .section.databases > .title > .icon:after {
+.section.databases > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "\f1c0";
 }
 
 
 /* Contact */
-.sidebar > .section.contact .item {
+.section.contact .item {
     display: flex;
     flex-direction: row;
     align-content: center;
 }
 
-.sidebar > .section.contact .item:not(:last-child) {
+.section.contact .item:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.sidebar > .section.contact .item .icon {
+.section.contact .item .icon {
     width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sidebar > .section.contact .item > .details { 
+.section.contact .item > .details { 
     display: flex;
     flex-direction: column;
 }
 
-.sidebar > .section.contact .item > .details *:not(:last-child)  {
+.section.contact .item > .details *:not(:last-child)  {
     margin-bottom: 5px 
 }
 
