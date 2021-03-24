@@ -37,7 +37,7 @@ h1 {
         "left       separator  right"
         "left       separator  right"
         "experience experience experience";
-    gap: 10px 10px;
+    gap: 20px 10px;
 }
 
 .picture {
@@ -103,6 +103,7 @@ h1 {
         "title    title"
         "timeline work";
     gap: 10px 10px;
+    margin-top: 10px;
 }
 
 .experience > .title {
@@ -223,11 +224,6 @@ h1 {
     font-size: 40px;
     font-weight:900;
     z-index: -1;
-}
-
-.section.profile > .icon:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f2bd";
 }
 
 .experience > .title > .icon {
@@ -396,6 +392,15 @@ h1 {
 .section.language > .content > .item:not(:last-child) {
     margin-right: 10px;
 }
+
+
+
+/* Courses */
+.section.courses > .title > .icon:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f501";
+}
+
 /* Tools */
 .section.tools > .title > .icon:after {
     font-family: "Font Awesome 5 Free";
@@ -439,8 +444,18 @@ h1 {
     content: "\f1c0";
 }
 
+/* Profile */
+.section.profile > .title > .icon:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f2bd";
+}
 
 /* Contact */
+.section.contact > .title > .icon:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f2b9";
+}
+
 .section.contact .item {
     display: flex;
     flex-direction: row;
