@@ -58,6 +58,10 @@ h1 {
     grid-area: 2 / 3;
 }
 
+.profile > .content {
+    font-size: 15pt
+}
+
 .courses {
     grid-area: 3 / 1 / 5 / 2;
 }
