@@ -28,7 +28,7 @@
 					<div class="icon"></div><h3>ABOUT ME</h3>
 				</div>
 				<div class="content">
-					I am a software engineer more than 13yr now. My main skills are around Domain-Driven Design, TDD, Clean Code, Event Sourcing, CQRS, and Microservices. One of my favourite topics is client/developer collaboration and how to effectively gain a common understanding of a domain. Lately, I play with functional programming mainly in Haskell.
+					I am a software engineer more than <span id="years"></span>yr now. My main skills are around Domain-Driven Design, TDD, Clean Code, Event Sourcing, CQRS, and Microservices. One of my favourite topics is client/developer collaboration and how to effectively gain a common understanding of a domain. Lately, I play with functional programming mainly in Haskell.
 				</div>
 			</div>
 			<div class="section contact">
@@ -93,6 +93,10 @@
 						<span class="name bold">Kotlin<span>
 					</div>
 					<div class="item">
+						<span class="icon-scala"></span>
+						<span class="name bold">Scala<span>
+					</div>
+					<div class="item">
 						<span class="icon-haskell"></span>
 						<span class="name bold">Haskell<span>
 					</div>
@@ -144,6 +148,11 @@
 					<div>Spring-cloud</div>
 					<div>Spring-data</div>
 					<div>Spring-security</div>
+					<div>Akka</div>
+					<div>Slick</div>
+					<div>Doobie</div>
+					<div>ZIO</div>
+					<div>Scala Test</div>
 					<div>Junit5</div>
 					<div>AssetJ</div>
 					<div>Axon</div>
@@ -158,6 +167,7 @@
 				<div class="content labeled">
 					<div>Gradle</div>
 					<div>Maven</div>
+					<div>Sbt</div>
 					<div>Yarn</div>
 					<div>Npm</div>
 					<div>Docker</div>
@@ -208,8 +218,54 @@
 				<div class="section work">
 					<div class="content">
 						<div class="job">
+							<div class="title">Senior Software Engineer </div>
+							<div class="company">Radbrackets | Poland(Remote) | Mar 2022 - Present</div>
+							<div class="details">
+								<div class="project">
+									<div class="name">Project: <span class="bold">Merchant order fulfillment application</span></div>
+									<div class="description">
+										I was delegated to one of the client to help in development. Application is used by merchants from restaurant when they would like to fulfill order that is posted by the consumer.
+									</div>
+									<div class="features list">
+										<div class="title">Main features:</div>
+										<div>Order fulfilment</div>
+										<div>Menu management</div>
+										<div>Order history</div>
+										<div>Printing receipt</div>
+										<div>Online/Offline restaurant</div>
+									</div>
+									<div class="responsibilities list">
+										<div class="title">Responsibilities:</div>
+										<div>Implementing core features</div>
+										<div>Advice on architectural decision</div>
+										<div>Refining task</div>
+										<div>Code review</div>
+										<div>Deploying and releasing</div>
+									</div>
+									<div class="stack">
+										<div class="title">Stack:</div>
+										<div class="labeled">
+											<div>scala</div>
+											<div>akka</div>
+											<div>zio</div>
+											<div>postgres</div>
+											<div>slick</div>
+											<div>kotlin</div>
+											<div>ktor</div>
+											<div>jdbi</div>
+											<div>k8s</div>
+											<div>kafka</div>
+											<div>aws</div>
+											<div>eda</div>
+											<div>git</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="job">
 							<div class="title">Team Leader since Mar 2021, Senior Software Engineer </div>
-							<div class="company">Layer | Berlin(Remote) | Nov 2019 - Present</div>
+							<div class="company">Layer | Berlin(Remote) | Nov 2019 - Mar 2022</div>
 							<div class="details">
 								<div class="project">
 									<div class="name">Project: <span class="bold">golayer.io</span></div>
@@ -228,7 +284,7 @@
 										<div class="title">Responsibilities:</div>
 										<div>Recruitment new employees</div>
 										<div>Implementing core features</div>
-										<div>Advice on architecural decision</div>
+										<div>Advice on architectural decision</div>
 										<div>Refining task</div>
 										<div>Code review</div>
 										<div>Leading event modeling sessions</div>
@@ -263,17 +319,17 @@
 								<div class="project">
 									<div class="name">Project: <span class="bold">O.L.A.F.</span></div>
 									<div class="description">
-										O.L.A.F is all about digitialization of hospital. It is whole solution to managment on various level: stuffing, drug distribution, planning, patient disposition
+										O.L.A.F is all about digitalization of hospital. It is whole solution to management on various level: staffing, drug distribution, planning, patient disposition
 									</div>
 									<div class="features list">
 										<div class="title">Main features:</div>
 										<div>Drug distribution planning</div>
-										<div>Patient mangment</div>
+										<div>Patient management</div>
 									</div>
 									<div class="responsibilities list">
 										<div class="title">Responsibilities:</div>
-										<div>Helping defining requirments in form BDD scenarios</div>
-										<div>Advice on architecural decision</div>
+										<div>Helping defining requirements in form BDD scenarios</div>
+										<div>Advice on architectural decision</div>
 										<div>Implementing core features</div>
 										<div>Deploying and releasing</div>
 										<div>Code review</div>
@@ -482,6 +538,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java8</div>
 											<div>jquery</div>
 											<div>jquery-ui</div>
 											<div>spring-core</div>
@@ -518,6 +575,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java8</div>
 											<div>ejb3</div>
 											<div>primefaces</div>
 											<div>jpa</div>
@@ -579,6 +637,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java8</div>
 											<div>hibernate</div>
 											<div>j2ee-servlet</div>
 											<div>jsp</div>
@@ -645,6 +704,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java8</div>
 											<div>osgi</div>
 											<div>spring-dm</div>
 											<div>struts1</div>
@@ -674,6 +734,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java7</div>
 											<div>struts1</div>
 											<div>top-link</div>
 											<div>oracle</div>
@@ -707,6 +768,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java6</div>
 											<div>ejb2</div>
 											<div>jdbc</div>
 											<div>spring</div>
@@ -744,6 +806,7 @@
 									<div class="stack">
 										<div class="title">Stack:</div>
 										<div class="labeled">
+											<div>java6</div>
 											<div>web-objects</div>
 											<div>itext</div>
 											<div>eof</div>
@@ -759,6 +822,16 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		function diff_years(dt2, dt1) {
+			var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+			diff /= (60 * 60 * 24);
+			return Math.abs(Math.round(diff/365.25));
+		}
+		var years = diff_years(new Date(), new Date(2008, 1, 1));
+		console.log(years);
+		document.getElementById('years').innerHTML = years;
+	</script>
 </body>
 </html>
 
